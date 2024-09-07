@@ -18,3 +18,4 @@ filelist:
 clean:
 	rm git_file_list file_list
 
+all: gitfilelist filelist
