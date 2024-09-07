@@ -1,13 +1,12 @@
 TARGETDIR="/home/serge/para/1_projects/paper_school_neighborhood_congruence/schoolneighborhoodconcordance"
 DIRECTORY=$(TARGETDIR)"/notebooks/"
 OTHER_GIT_REPO_PATH=$(TARGETDIR)"/.git"
-OTHER_WORK_TREE_PATH=$(TARGETDIR)
 GIT_BRANCH=main
 GIT_DIRECTORY=.
 
 # Target to list files in the other Git repository
 gitfilelist:
-	@git --git-dir=$(OTHER_GIT_REPO_PATH) --work-tree=$(OTHER_WORK_TREE_PATH) \
+	@git --git-dir=$(OTHER_GIT_REPO_PATH) --work-tree=$(TARGETDIR) \
 	ls-tree -r $(GIT_BRANCH) -- $(GIT_DIRECTORY) > git_file_list
 
 
